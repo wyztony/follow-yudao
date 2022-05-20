@@ -8,9 +8,11 @@ function resolve(dir) {
 
 const CompressionPlugin = require('compression-webpack-plugin')
 
-const name = process.env.VUE_APP_TITLE || '芋道管理系统' // 网页标题
+const name = process.env.VUE_APP_TITLE || 'follow管理系统' // 网页标题
 
-const port = process.env.port || process.env.npm_config_port || 80 // 端口
+const port = process.env.port || process.env.npm_config_port || 8080 // 端口
+
+const target = process.env.target || 'http://localhost:8090'
 
 // vue.config.js 配置说明
 //官方vue.config.js 参考文档 https://cli.vuejs.org/zh/config/#css-loaderoptions
@@ -36,7 +38,7 @@ module.exports = {
     proxy: {
       // detail: https://cli.vuejs.org/config/#devserver-proxy
       [process.env.VUE_APP_BASE_API]: {
-        target: `http://localhost:48080`,
+        target: target,
         // target: `http://api-dashboard.yudao.iocoder.cn`,
         changeOrigin: true,
         pathRewrite: {

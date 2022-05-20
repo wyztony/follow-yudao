@@ -45,3 +45,9 @@ nbdist/
 
 ### JRebel ###
 rebel.xml
+
+###
+yudao-server/src/main/resources/application-local.yaml
+yudao-server/src/main/resources/application-prod.yaml
+yudao-ui-admin/.env.local
+yudao-ui-admin/.env.prod
