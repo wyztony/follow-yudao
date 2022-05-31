@@ -89,7 +89,7 @@ public class ApiAccessLogFilter extends ApiRequestFilter {
             accessLog.setResultCode(GlobalErrorCodeConstants.INTERNAL_SERVER_ERROR.getCode());
             accessLog.setResultMsg(ExceptionUtil.getRootCauseMessage(ex));
         } else {
-            accessLog.setResultCode(0);
+            accessLog.setResultCode(9);
             accessLog.setResultMsg("");
         }
         // 设置其它字段
